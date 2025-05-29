@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a5ecff165348f3977b72031b3aff16, type: 3}
+  m_Name: Audio Clip Provider
+  m_EditorClassIdentifier: 
+  <Sfx>k__BackingField:
+    _keyData:
+    - Hero taken damage
+    - Enemy death
+    - Put bomb
+    - Explosion
+    - Bomb explosion
+    _valueData:
+    - {fileID: 8300000, guid: eace94f70b1ab7f4da99abc8a6ff0797, type: 3}
+    - {fileID: 8300000, guid: 02393b970b0ab584e9ffa041dcc9d05d, type: 3}
+    - {fileID: 8300000, guid: 5748abb47d36cff4a837e739fcbcfc73, type: 3}
+    - {fileID: 8300000, guid: c7bba55f46216ea49b4f94ea044e6b83, type: 3}
+    - {fileID: 8300000, guid: c7bba55f46216ea49b4f94ea044e6b83, type: 3}
+  <UiSfx>k__BackingField:
+    _keyData: 00000000
+    _valueData:
+    - {fileID: 8300000, guid: f535793379a91b24b834a5d7a1f9d834, type: 3}
+  <Musics>k__BackingField:
+    _keyData: 0000000001000000
+    _valueData:
+    - {fileID: 8300000, guid: ac896f73311f0ab479989f0d9f9e9e64, type: 3}
+    - {fileID: 8300000, guid: ac896f73311f0ab479989f0d9f9e9e64, type: 3}
+  <ShortMusic>k__BackingField:
+    _keyData: 0000000001000000
+    _valueData:
+    - {fileID: 8300000, guid: 10ab92f4c0ebc2644ae8fd82375b9a75, type: 3}
+    - {fileID: 8300000, guid: 137644834ecb2d34090a3b7060151f57, type: 3}

@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7187334278577577992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 359006080281688521}
+  - component: {fileID: 2891268413809682150}
+  m_Layer: 0
+  m_Name: ProjectContext
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &359006080281688521
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7187334278577577992}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6847814604491471656}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2891268413809682150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7187334278577577992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e6589720da476459dc6dd71624b071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectInstallers:
+  - {fileID: 11400000, guid: 48592eb322a4ab44580da6ad50f079ed, type: 2}
+  _monoInstallers:
+  - {fileID: 5986891859005493265}
+  _installerPrefabs: []
+  _parentNewObjectsUnderContext: 1
+  _editorReflectionBakingCoverageMode: 0
+  _buildsReflectionBakingCoverageMode: 0
+  _settings:
+    _ensureDeterministicDestructionOrderOnApplicationQuit: 0
+    _displayWarningWhenResolvingDuringInstall: 1
+    _validationRootResolveMethod: 0
+    _validationErrorResponse: 0
+    _signalSettings:
+      _defaultSyncMode: 0
+      _missingHandlerDefaultResponse: 2
+      _requireStrictUnsubscribe: 0
+      _defaultAsyncTickPriority: 1
+--- !u!1 &7915166579143021971
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6847814604491471656}
+  - component: {fileID: 5986891859005493265}
+  m_Layer: 0
+  m_Name: Project installer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6847814604491471656
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7915166579143021971}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 359006080281688521}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5986891859005493265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7915166579143021971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9bb2e078db463bac8679fff2493273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _aiData: {fileID: 11400000, guid: aa034e23ac655ad4c83f3f0391fec357, type: 2}
+  _mapData: {fileID: 11400000, guid: a468fdc1c8113e546b604f96023b62b7, type: 2}
+  _heroData: {fileID: 11400000, guid: eb53c9d54d44aae4e8aa6ecf56b5c61f, type: 2}
+  _enemyList: {fileID: 11400000, guid: def0c122125dfc448990a6dbc8a2b3b4, type: 2}
+  _bonusNames: {fileID: 11400000, guid: c61baf124f307da449783de6a03a27dc, type: 2}
+  _skinLibrary: {fileID: 11400000, guid: 4a7e4d30d04a02d438dd472524016b72, type: 2}
+  _bonusSprites: {fileID: 11400000, guid: dab0738d3a6b6384eb90b21933f8ce50, type: 2}
+  _gameTimerData: {fileID: 11400000, guid: eb62a15f3bf9f8f4e8d120ec1cfabcbc, type: 2}
+  _windowKitData: {fileID: 11400000, guid: 29775650dbd34dc4e9aa2000e8f572b8, type: 2}
+  _sceneNamesData: {fileID: 11400000, guid: d0022a8e84f23ca43b2a0e9413aaad62, type: 2}
+  _tileCollection: {fileID: 11400000, guid: 260116ef626b8464aa40ca488c3f2af4, type: 2}
+  _audioClipProvider: {fileID: 11400000, guid: 61cfd0d77e9ed6a46af42678fbaffafa, type: 2}
+  _assetProvider: {fileID: 11400000, guid: ca71632310af84646bd2153a470be011, type: 2}
+  _audioMixerProvider: {fileID: 11400000, guid: 3748f66f52b277c4bb22e79c30881386, type: 2}
+  _purchaseItemProvider: {fileID: 11400000, guid: 491505b276c38d148afd691794d69341, type: 2}
+  _spriteLibraryProvider: {fileID: 11400000, guid: e4b974dfc52f9844e9f2dfdd4cf908f5, type: 2}
+  _increaseSpeedBonusData: {fileID: 11400000, guid: 50d8a43af8d6793419da2c73ae7f1475, type: 2}
+  _pocketResizeBonusSettings: {fileID: 11400000, guid: b2ce942a800ee644eafa7fa87c1177ca, type: 2}

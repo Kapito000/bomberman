@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc53c414784741aba87337e8fe708f13, type: 3}
+  m_Name: DirectLinkProvider
+  m_EditorClassIdentifier: 
+  _camera: {fileID: 3495701177089780482, guid: 5278d9ec4c4caa940b878d2098984464, type: 3}
+  _virtualCamera: {fileID: 5275231450059323486, guid: af826cf0be4df5c49af016e7f5afedf3, type: 3}
+  _hero: {fileID: 771511697424430387, guid: 8c6293d2d569ffd46b13832d1774c499, type: 3}
+  _heroSpawnPoint: {fileID: 3622567681166204801, guid: 7850254af3f2ac34e91da140fc2b0f75, type: 3}
+  _explosion: {fileID: 4520389842868597706, guid: f2b0be94c295e7d4b88034b81dd5016a, type: 3}
+  _baseEnemy: {fileID: 5150371019810778337, guid: b400a96b57938b444bda5e9f8daa434c, type: 3}
+  _finishLevelDoor: {fileID: 5717685852050178812, guid: 11e17d803bf338245b468ea41f01af8a, type: 3}
+  _bomb: {fileID: 522777777130883961, guid: ef692530b47e6ac4ebc1b83a8297df86, type: 3}
+  _bombHunter: {fileID: 4024519466054772191, guid: 12d8d4d883112e447a7f5549b9212364, type: 3}
+  _remoteDetonation: {fileID: 1481837853571293900, guid: 76fe8b5c80602c948a00adf49fa9695a, type: 3}
+  _bonus: {fileID: 5717685852050178812, guid: 3eb45dcfe0a042d46938a2656c1704e1, type: 3}
+  _ambientMusic: {fileID: 6151127893788280244, guid: a57fa11e23da93849a82fa499065628d, type: 3}
+  _finishLevelMusic: {fileID: 6151127893788280244, guid: 18e12603fcc99694e96571b082c6cf90, type: 3}
+  _destructibleTile: {fileID: 4954203463075040424, guid: dfaa6b8ca3608ce4b9c4b19e8271c4ca, type: 3}
+  _root: {fileID: 4644769364156463938, guid: 2a25ecfac15109f4b9f21645efa713e4, type: 3}
+  _windowsRoot: {fileID: 4030447168085231578, guid: 33fdfcae503e41e4d9bde70373328093, type: 3}
+  _mainMenuUpperPanel: {fileID: 252757770158953570, guid: 7e3d8596985c7e84a8cb1ed07bf73d31, type: 3}
+  _eventSystem: {fileID: 176851465483218010, guid: a3c37fa5708cd3944a3f5bb8921fd59e, type: 3}
+  _windows:
+    _keyData: 0000000001000000020000000400000005000000
+    _valueData:
+    - {fileID: 1728174686819343289, guid: 79ce06b3cc4e0334ca4a33c0ed511e85, type: 3}
+    - {fileID: 6570180536727888626, guid: cfa886046fac29841b983e0103e37735, type: 3}
+    - {fileID: 6274013183545169145, guid: c27d413c4c1b39a42b712ba71b8fcc5a, type: 3}
+    - {fileID: 7198722437013280408, guid: 0e57600613afbb445ac0a540d9a42388, type: 3}
+    - {fileID: 7198722437013280408, guid: 7c59eeabe11a03c40af216e113387e12, type: 3}
+  _shopItemView: {fileID: 7772242127286997233, guid: 16a93ff7ee1390145b4a7b3883205126, type: 3}
+  _shoppingCartItemView: {fileID: 8862165829256722068, guid: e14439ea0b4f7964fadd880e5369d811, type: 3}
+  _hudRoot: {fileID: 8017098716089676229, guid: faa23bd9d87b9194dbb9532caf1f2fdb, type: 3}
+  _upperPanel: {fileID: 8391452172291091251, guid: 753c2ee5865d4114c889ada63cc2d3fc, type: 3}
+  _putBombButtonPanel: {fileID: 1438341854101721511, guid: fe4463b7958a39e499343edeacee3383, type: 3}
+  _characterJoystick: {fileID: 186695312122789468, guid: fa117ee6c85273a498a7aa54c49a092c, type: 3}
+  _lifePointsPanel: {fileID: 8672611766286454625, guid: 1b687938ee2272843b2647ab28065b3b, type: 3}
+  _bombCounterPanel: {fileID: 4247654622214523650, guid: 7ee57565c2b4f3c43857624de142121d, type: 3}
+  _enemyCounterDisplay: {fileID: 4247654622214523650, guid: cb1ec509190539c4eaf351b675aff294, type: 3}
+  _gameTimerDisplay: {fileID: 8544459088435423952, guid: d0d9aed9aea37fd4ca2bdd6f21c7dd6d, type: 3}

@@ -1,0 +1,31 @@
+﻿using Gameplay.Feature.Audio.Behaviour;
+using Gameplay.Feature.Map.MapController;
+using Gameplay.UI.Shop.PurchaseProcessor;
+using Infrastructure;
+using Infrastructure.Boot;
+using Infrastructure.ECS;
+using Leopotam.EcsLite;
+using Mitfart.LeoECSLite.UnityIntegration;
+
+namespace Gameplay.LevelData
+{
+	public interface ILevelData : IService
+	{
+		EcsWorld World { get; set; }
+		IEcsRunner EcsRunner { get; set; }
+		IDevSceneRunner DevSceneRunner { get; set; }
+		IPurchasePopupProcessor PurchasePopupProcessor { get; set; }
+#if UNITY_EDITOR
+		EcsWorldDebugSystem EcsWorldDebugSystem { get; set; }
+#endif
+	}
+
+	public interface IGameLevelData : ILevelData
+	{
+		IMapController MapController { get; set; }
+		PooledAudioSource.Pool AudioSourcePool { get; set; }
+	}
+
+	public interface IMainMenuLevelData : ILevelData
+	{ }
+}
