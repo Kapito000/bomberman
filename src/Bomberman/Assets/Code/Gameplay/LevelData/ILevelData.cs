@@ -1,6 +1,5 @@
 ﻿using Gameplay.Feature.Audio.Behaviour;
 using Gameplay.Feature.Map.MapController;
-using Gameplay.UI.Shop.PurchaseProcessor;
 using Infrastructure;
 using Infrastructure.Boot;
 using Infrastructure.ECS;
@@ -14,7 +13,6 @@ namespace Gameplay.LevelData
 		EcsWorld World { get; set; }
 		IEcsRunner EcsRunner { get; set; }
 		IDevSceneRunner DevSceneRunner { get; set; }
-		IPurchasePopupProcessor PurchasePopupProcessor { get; set; }
 #if UNITY_EDITOR
 		EcsWorldDebugSystem EcsWorldDebugSystem { get; set; }
 #endif

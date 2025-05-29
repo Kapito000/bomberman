@@ -19,7 +19,6 @@ using Gameplay.FinishLevel.Condition.GameOver;
 using Gameplay.FinishLevel.Condition.LevelComplete;
 using Gameplay.LevelData;
 using Gameplay.MapView;
-using Gameplay.UI.Shop.PurchaseProcessor;
 using Gameplay.UI.StaticData;
 using Infrastructure.Boot;
 using Infrastructure.ECS;

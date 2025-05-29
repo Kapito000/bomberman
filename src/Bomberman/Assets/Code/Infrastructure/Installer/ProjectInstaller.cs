@@ -28,7 +28,6 @@ using Gameplay.SaveLoad;
 using Gameplay.StaticData.LevelData;
 using Gameplay.StaticData.SceneNames;
 using Gameplay.UI.Factory;
-using Gameplay.UI.Shop.PurchaseProcessor;
 using Gameplay.UI.StaticData;
 using Gameplay.Windows;
 using Gameplay.Windows.Factory;
@@ -49,8 +48,6 @@ using MetaSystem.GameSettings;
 using MetaSystem.GameSettings.Audio;
 using MetaSystem.GameSettings.StaticData;
 using MetaSystem.GameSettings.StaticData.Audio;
-using MetaSystem.Shop;
-using MetaSystem.Shop.StaticData;
 using UnityEngine;
 using Zenject;
 using AudioSettings = MetaSystem.GameSettings.Audio.AudioSettings;
@@ -73,7 +70,6 @@ namespace Infrastructure.Installer
 		[SerializeField] AudioClipProvider _audioClipProvider;
 		[SerializeField] DirectLinkProvider _assetProvider;
 		[SerializeField] AudioMixerProvider _audioMixerProvider;
-		[SerializeField] PurchaseItemProvider _purchaseItemProvider;
 		[SerializeField] SpriteLibraryProvider _spriteLibraryProvider;
 		[SerializeField] IncreaseSpeedBonusData _increaseSpeedBonusData;
 		[SerializeField] PocketResizeBonusSettings _pocketResizeBonusSettings;
@@ -90,7 +86,6 @@ namespace Infrastructure.Installer
 			BindTimeService();
 			BindSceneLoader();
 			BindUIFactories();
-			BindShopService();
 			BindAudioService();
 			BindInputService();
 			BindMusicFactory();
@@ -107,31 +102,12 @@ namespace Infrastructure.Installer
 			BindGameStateMachine();
 			BindAudioClipProvider();
 			BindCollisionRegistry();
-			BindPurchaseProcessor();
 			BindAudioMixerProvider();
 			BindInstantiateService();
 			BindGameSettingsService();
-			BindPurchaseItemProvider();
 			BindBombCollectionService();
 			BindEntityBehaviourFactory();
 			BindIncreaseSpeedBonusModificator();
-		}
-
-		void BindPurchaseProcessor()
-		{
-			Container.BindInterfacesTo<PurchasePopupProcessor>().AsSingle()
-				.MoveIntoDirectSubContainers();
-		}
-		
-		void BindShopService()
-		{
-			Container.Bind<IShopService>().To<ShopService>().AsSingle();
-		}
-		
-		void BindPurchaseItemProvider()
-		{
-			Container.Bind<IPurchaseItemProvider>()
-				.FromInstance(_purchaseItemProvider).AsSingle();
 		}
 
 		void BindIncreaseSpeedBonusModificator()

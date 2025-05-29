@@ -1,15 +1,12 @@
 ﻿using Gameplay.Feature.FeatureControl;
 using Gameplay.Feature.MainMenu.Factory;
 using Gameplay.LevelData;
-using Gameplay.UI.Shop.Factory;
-using Gameplay.UI.Shop.PurchaseProcessor;
 using Gameplay.UI.StaticData;
 using Infrastructure.Boot;
 using Infrastructure.ECS;
 using Infrastructure.GameStatus;
 using Infrastructure.GameStatus.State;
 using MetaSystem.MainMenu;
-using MetaSystem.Shop;
 using UnityEngine;
 using Zenject;
 
@@ -30,7 +27,6 @@ namespace Infrastructure.Installer
 			BindWindowKitId();
 			BindDevSceneRunner();
 			BindFeatureController();
-			BindShoppingCartService();
 		}
 
 		public void Initialize()
@@ -44,14 +40,6 @@ namespace Infrastructure.Installer
 		{
 			_levelData.EcsRunner = Container.Resolve<IEcsRunner>();
 			_levelData.DevSceneRunner = Container.Resolve<IDevSceneRunner>();
-			_levelData.PurchasePopupProcessor = Container
-				.Resolve<IPurchasePopupProcessor>();
-		}
-
-		void BindShoppingCartService()
-		{
-			Container.Bind<IShoppingCartService>().To<ShoppingCartService>()
-				.AsSingle();
 		}
 
 		void BindWindowKitId()
@@ -61,7 +49,6 @@ namespace Infrastructure.Installer
 
 		void BindFactories()
 		{
-			Container.Bind<IShopUiFactory>().To<ShopUiFactory>().AsSingle();
 			Container.Bind<IMainMenuFactory>().To<MainMenuFactory>().AsSingle();
 		}
 

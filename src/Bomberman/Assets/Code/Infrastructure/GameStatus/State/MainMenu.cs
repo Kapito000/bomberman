@@ -15,7 +15,6 @@ namespace Infrastructure.GameStatus.State
 			if (Util.TryDevStart(_levelData))
 				return;
 
-			_levelData.PurchasePopupProcessor.Init();
 			_levelData.EcsRunner.InitWorld();
 		}
 

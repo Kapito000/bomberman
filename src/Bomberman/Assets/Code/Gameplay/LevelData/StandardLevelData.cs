@@ -1,6 +1,5 @@
 ﻿using Gameplay.Feature.Audio.Behaviour;
 using Gameplay.Feature.Map.MapController;
-using Gameplay.UI.Shop.PurchaseProcessor;
 using Infrastructure.Boot;
 using Infrastructure.ECS;
 using Leopotam.EcsLite;
@@ -15,7 +14,6 @@ namespace Gameplay.LevelData
 		public IMapController MapController { get; set; }
 		public IDevSceneRunner DevSceneRunner { get; set; }
 		public PooledAudioSource.Pool AudioSourcePool { get; set; }
-		public IPurchasePopupProcessor PurchasePopupProcessor { get; set; }
 #if UNITY_EDITOR
 		public EcsWorldDebugSystem EcsWorldDebugSystem { get; set; }
 #endif

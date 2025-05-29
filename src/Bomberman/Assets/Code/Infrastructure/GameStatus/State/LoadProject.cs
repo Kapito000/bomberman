@@ -1,14 +1,9 @@
-﻿using System;
-using Cysharp.Threading.Tasks;
-using Gameplay.Feature.Bomb.StaticData;
+﻿using Gameplay.Feature.Bomb.StaticData;
 using Gameplay.Feature.Bonus.StaticData;
 using Gameplay.PlayersBombCollection.StaticData;
 using Gameplay.SaveLoad;
 using Gameplay.StaticData.LevelData;
-using RemotePlugin.UserDataService;
-using UnityEngine;
 using Zenject;
-using RemoteServices = RemotePlugin.Remote;
 
 namespace Infrastructure.GameStatus.State
 {
@@ -30,23 +25,15 @@ namespace Infrastructure.GameStatus.State
 
 		public void Enter()
 		{
-			Init().Forget();
+			Init();
 		}
 
 		public void Exit()
 		{ }
 
-		async UniTaskVoid Init()
+		void Init()
 		{
 			InitStaticData();
-			try
-			{
-				await InitRemotePluginAsync();
-			}
-			catch (Exception e)
-			{
-				Debug.LogError($"Cannot to init remote plugin.\n{e.Message}");
-			}
 
 			_saveLoadService.Load();
 			_gameStateMachine.EnterToLoadScene(FirstScene);
@@ -64,17 +51,6 @@ namespace Infrastructure.GameStatus.State
 			_bonusesForLevel.Init();
 			_additionalBombBonuses.Init();
 			_bombPocketBonusForLevels.Init();
-		}
-
-		async UniTask InitRemotePluginAsync()
-		{
-			var userDataLoader = new RemoteServices.UserDataLoader();
-			var userData = await userDataLoader.LoadUserDataAsync();
-			var exceptionHandler = new RemoteServices.ConsoleExceptionHandler(false);
-			var userDataService =
-				new RemoteUserDataService(userData, exceptionHandler);
-
-			RemoteServices.Services.Init(exceptionHandler, userDataService);
 		}
 	}
 }

@@ -7,10 +7,6 @@ using Gameplay.Windows;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Menu = Constant.CreateAssetMenu;
-using ShopPurchasableItemView =
-	Gameplay.UI.Shop.ShopContent.PurchasableItemView;
-using ShoppingCartPurchasableItemView =
-	Gameplay.UI.ShoppingCart.PurchasableItemView;
 
 namespace Infrastructure.AssetProvider
 {
@@ -44,9 +40,6 @@ namespace Infrastructure.AssetProvider
 		[SerializeField] GameObject _mainMenuUpperPanel;
 		[SerializeField] EventSystem _eventSystem;
 		[SerializeField] WindowsDictionary _windows;
-		[Header("Shop UI")]
-		[SerializeField] ShopPurchasableItemView _shopItemView;
-		[SerializeField] ShoppingCartPurchasableItemView _shoppingCartItemView;
 		[Header("HUD")]
 		[SerializeField] Canvas _hudRoot;
 		[SerializeField] GameObject _upperPanel;
@@ -90,8 +83,5 @@ namespace Infrastructure.AssetProvider
 		public GameObject MainMenuUpperPanel() => _mainMenuUpperPanel;
 		public IntegerDisplay EnemyCounterDisplay() => _enemyCounterDisplay;
 		public GameObject Bonus() => _bonus;
-		public ShopPurchasableItemView ShopItemView() => _shopItemView;
-		public ShoppingCartPurchasableItemView ShoppingCartItemView() =>
-			_shoppingCartItemView;
 	}
 }

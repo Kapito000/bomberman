@@ -3,8 +3,6 @@ using Cinemachine;
 using Common.HUD;
 using Gameplay.Feature.Bomb;
 using Gameplay.Feature.HUD.Feature.Timer.Behaviour;
-using Gameplay.UI.Shop;
-using Gameplay.UI.Shop.ShopContent;
 using Gameplay.Windows;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -39,7 +37,5 @@ namespace Infrastructure.AssetProvider
 		GameObject MainMenuUpperPanel();
 		IntegerDisplay EnemyCounterDisplay();
 		GameObject Bonus();
-		PurchasableItemView ShopItemView();
-		Gameplay.UI.ShoppingCart.PurchasableItemView ShoppingCartItemView();
 	}
 }
