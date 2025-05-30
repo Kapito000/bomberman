@@ -15,7 +15,6 @@ namespace Gameplay.Feature.MapGenerator.Services.SubGenerator
 		[Inject] IBonusFactory _bonusFactory;
 		[Inject] IProgressService _progressService;
 		[Inject] IBonusesForLevel _bonusesForLevel;
-		[Inject] IAdditionalBombBonuses _additionalBombBonuses;
 
 		public void Create(IGrid<TileType> tilesGrid, IGrid<MapItem> mapItemsGrid,
 			IGrid<string> bonusesGrid)

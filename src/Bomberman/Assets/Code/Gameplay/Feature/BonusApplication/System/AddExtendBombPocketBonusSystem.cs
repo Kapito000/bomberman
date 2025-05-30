@@ -3,7 +3,6 @@ using Gameplay.Feature.Bomb.Component;
 using Gameplay.Feature.Bonus.Component;
 using Gameplay.Feature.Bonus.StaticData;
 using Gameplay.Feature.BonusApplication.Component;
-using Gameplay.PlayersBombCollection;
 using Infrastructure.ECS.Wrapper;
 using Infrastructure.ECS.Wrapper.Factory;
 using Infrastructure.TimeService;
@@ -15,11 +14,12 @@ namespace Gameplay.Feature.BonusApplication.System
 {
 	public sealed class AddExtendBombPocketBonusSystem : IEcsRunSystem
 	{
+		const int _startBombCollections = 1;
+
 		[Inject] IBonusNames _bonusNames;
 		[Inject] ITimeService _timeService;
 		[Inject] EntityWrapper _bonus;
 		[Inject] IEntityWrapperFactory _entityWrapperFactory;
-		[Inject] IBombCollectionService _bombCollectionService;
 		[Inject] IPocketResizeBonusSettings _pocketResizeBonusSettings;
 
 		readonly EcsFilterInject<
@@ -36,9 +36,8 @@ namespace Gameplay.Feature.BonusApplication.System
 				if (CanApplyBonus(_bonus, out var target) == false)
 					continue;
 
-				var size = SetBombPocketSize(target);
 				CreateBonusTimer(target);
-				AddBombsToCollection(target, size);
+				AddBombsToCollection(target, _startBombCollections);
 
 				_bonus.Destroy();
 			}
@@ -55,13 +54,6 @@ namespace Gameplay.Feature.BonusApplication.System
 			var endTimerMoment =
 				_timeService.GameTime() + _pocketResizeBonusSettings.Timer;
 			target.ReplaceBombPocketSizeBonusTimer(endTimerMoment);
-		}
-
-		int SetBombPocketSize(EntityWrapper target)
-		{
-			var size = _bombCollectionService.BombPocketSizeBonusForCurrentLevel();
-			target.SetBombStackSize(size);
-			return size;
 		}
 
 		bool CanApplyBonus(EntityWrapper bonus, out EntityWrapper target)

@@ -19,8 +19,6 @@ using Gameplay.Input.Character;
 using Gameplay.LevelData;
 using Gameplay.MapTile.TileProvider;
 using Gameplay.Physics;
-using Gameplay.PlayersBombCollection;
-using Gameplay.PlayersBombCollection.StaticData;
 using Gameplay.Progress;
 using Gameplay.Reskin;
 using Gameplay.Reskin.StaticData;
@@ -105,7 +103,6 @@ namespace Infrastructure.Installer
 			BindAudioMixerProvider();
 			BindInstantiateService();
 			BindGameSettingsService();
-			BindBombCollectionService();
 			BindEntityBehaviourFactory();
 			BindIncreaseSpeedBonusModificator();
 		}
@@ -114,12 +111,6 @@ namespace Infrastructure.Installer
 		{
 			Container.Bind<IIncreaseSpeedBonusModificator>()
 				.To<IncreaseSpeedBonusModificator>().AsSingle();
-		}
-
-		void BindBombCollectionService()
-		{
-			Container.Bind<IBombCollectionService>().To<BombCollectionService>()
-				.AsSingle();
 		}
 
 		void BindSaveLoadService()
@@ -322,10 +313,6 @@ namespace Infrastructure.Installer
 				.AsSingle().WhenInjectedInto<IGameSettingsStartValueData>();
 			Container.Bind<ISkinLibrary>().FromInstance(_skinLibrary).AsSingle();
 			Container.Bind<IBonusesForLevel>().To<BonusesForLevel>().AsSingle();
-			Container.Bind<IAdditionalBombBonuses>().To<AdditionalBombBonuses>()
-				.AsSingle();
-			Container.Bind<IBombPocketBonusForLevels>().To<BombPocketBonusForLevels>()
-				.AsSingle();
 		}
 
 		void BindGameStateMachine()

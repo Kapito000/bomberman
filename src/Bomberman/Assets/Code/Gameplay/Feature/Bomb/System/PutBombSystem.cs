@@ -3,7 +3,6 @@ using Gameplay.Feature.Bomb.Behaviour;
 using Gameplay.Feature.Bomb.Component;
 using Gameplay.Feature.Bomb.Factory;
 using Gameplay.Feature.Map.MapController;
-using Gameplay.PlayersBombCollection;
 using Infrastructure.ECS.Wrapper;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
@@ -17,7 +16,6 @@ namespace Gameplay.Feature.Bomb.System
 		[Inject] EntityWrapper _bombParent;
 		[Inject] EntityWrapper _bombCarrier;
 		[Inject] IMapController _mapController;
-		[Inject] IBombCollectionService _bombCollectionService;
 
 		readonly EcsFilterInject<
 				Inc<BombCarrier, BombCollectionComponent, PutBombRequest,
@@ -59,7 +57,6 @@ namespace Gameplay.Feature.Bomb.System
 			bombCollection.TryGetCount(bombType, out var count)
 			&& count > 0;
 
-		BombType DefaultBombType() =>
-			_bombCollectionService.DefaultBombType();
+		BombType DefaultBombType() => BombType.Usual;
 	}
 }

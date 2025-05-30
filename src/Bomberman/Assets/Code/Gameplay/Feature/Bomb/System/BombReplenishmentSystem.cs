@@ -1,6 +1,4 @@
 ﻿using Gameplay.Feature.Bomb.Component;
-using Gameplay.PlayersBombCollection;
-using Infrastructure.ECS;
 using Infrastructure.ECS.Wrapper;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
@@ -11,7 +9,6 @@ namespace Gameplay.Feature.Bomb.System
 	public sealed class BombReplenishmentSystem : IEcsRunSystem
 	{
 		[Inject] EntityWrapper _bombCarrier;
-		[Inject] IBombCollectionService _bombCollectionService;
 
 		readonly EcsFilterInject<
 				Inc<BombCarrier, BombCollectionComponent, BombStackSize>>

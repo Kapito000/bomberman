@@ -1,11 +1,11 @@
 ﻿using Common.Component;
 using Gameplay.Audio.Service;
+using Gameplay.Feature.Bomb;
 using Gameplay.Feature.Bomb.Behaviour;
 using Gameplay.Feature.Bomb.Component;
 using Gameplay.Feature.Hero.Component;
 using Gameplay.Feature.Hero.StaticData;
 using Gameplay.Feature.Input.Component;
-using Gameplay.PlayersBombCollection;
 using Infrastructure.ECS.Wrapper;
 using Infrastructure.ECS.Wrapper.Factory;
 using Infrastructure.Factory.Kit;
@@ -23,7 +23,6 @@ namespace Gameplay.Feature.Hero.Factory
 		[Inject] IFactoryKit _kit;
 		[Inject] IAudioService _audioService;
 		[Inject] IEntityWrapperFactory _entityFactory;
-		[Inject] IBombCollectionService _bombCollectionService;
 
 		public int CreateHero(Vector2 pos, Quaternion rot, Transform parent)
 		{
@@ -70,8 +69,7 @@ namespace Gameplay.Feature.Hero.Factory
 
 			hero.AddBombCollectionComponent(bombCollection);
 
-			var bombType = _bombCollectionService.DefaultBombType();
-			bombCollection.AddBomb(bombType);
+			bombCollection.AddBomb(BombType.Usual);
 		}
 
 		void AddTakenDamageEffectComponents(EntityWrapper heroEntity)

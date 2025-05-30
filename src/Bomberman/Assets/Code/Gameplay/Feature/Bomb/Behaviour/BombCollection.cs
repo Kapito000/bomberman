@@ -1,17 +1,13 @@
 ﻿using System.Linq;
 using Common.Dictionary;
 using Common.Util.Enum;
-using Gameplay.PlayersBombCollection;
 using UnityEngine;
-using Zenject;
 
 namespace Gameplay.Feature.Bomb.Behaviour
 {
 	public class BombCollection : MonoBehaviour, IBombCollection
 	{
 		[SerializeField] BombTypeIntDictionary _collection;
-
-		[Inject] IBombCollectionService _bombCollectionService;
 
 		public bool TryGetCount(BombType bombType, out int count)
 		{
@@ -65,7 +61,7 @@ namespace Gameplay.Feature.Bomb.Behaviour
 			_collection[DefaultBombType()];
 
 		public BombType DefaultBombType() =>
-			_bombCollectionService.DefaultBombType();
+			BombType.Usual;
 
 		bool ExistBombTypeWithDebug(BombType bombType)
 		{

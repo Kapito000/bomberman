@@ -1,6 +1,5 @@
 ﻿using Gameplay.Feature.Bomb.Component;
 using Gameplay.Feature.BonusApplication.Component;
-using Gameplay.PlayersBombCollection;
 using Infrastructure.ECS.Wrapper;
 using Infrastructure.TimeService;
 using Leopotam.EcsLite;
@@ -13,7 +12,6 @@ namespace Gameplay.Feature.BonusApplication.System
 	{
 		[Inject] ITimeService _timeService;
 		[Inject] EntityWrapper _bonusCarrier;
-		[Inject] IBombCollectionService _bombCollectionService;
 
 		readonly EcsFilterInject<
 				Inc<BombStackSize, BombCollectionComponent, BombPocketSizeBonusTimer>>
@@ -29,7 +27,7 @@ namespace Gameplay.Feature.BonusApplication.System
 				if (_timeService.GameTime() < timerEndMoment)
 					continue;
 
-				var size = _bombCollectionService.DefaultBombPocketSize();
+				var size = 1;
 				_bonusCarrier.SetBombStackSize(size);
 
 				_bonusCarrier.Remove<BombPocketSizeBonusTimer>();

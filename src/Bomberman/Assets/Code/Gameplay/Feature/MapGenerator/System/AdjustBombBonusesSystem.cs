@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Common.Component;
 using Gameplay.Feature.Bomb;
 using Gameplay.Feature.Bonus.Component;
@@ -18,7 +20,6 @@ namespace Gameplay.Feature.MapGenerator.System
 		[Inject] IBonusNames _bonusNames;
 		[Inject] EntityWrapper _bonus;
 		[Inject] IProgressService _progress;
-		[Inject] IAdditionalBombBonuses _additionalBombBonuses;
 
 		readonly EcsFilterInject<Inc<BonusComponent, BonusType, FirstBreath>>
 			_bonusFilterInject;
@@ -49,19 +50,7 @@ namespace Gameplay.Feature.MapGenerator.System
 
 		bool TryGetBombDataList(out List<BombType> list)
 		{
-			list = new();
-
-			if (false == _additionalBombBonuses
-				    .TryGetBombs(_progress.ReachedLevel, out var bombsData))
-			{
-				Debug.LogError("Cannot to get bomb bonuses.");
-				return false;
-			}
-
-			foreach (var pair in bombsData)
-				for (int i = 0; i < pair.Value; i++)
-					list.Add(pair.Key);
-
+			list = Enum.GetValues(typeof(BombType)).Cast<BombType>().ToList();
 			return true;
 		}
 	}
