@@ -99,12 +99,12 @@ namespace StaticTableData
 			return _cachedColumnIds.ContainsKey(columnName);
 		}
 
-		public IReadOnlyCollection<string>? GetColumnNames()
+		public IReadOnlyCollection<string> GetColumnNames()
 		{
 			return _cachedColumnIds?.Keys;
 		}
 
-		public IReadOnlyCollection<string>? GetRowNames()
+		public IReadOnlyCollection<string> GetRowNames()
 		{
 			return _cachedRowIds?.Keys;
 		}

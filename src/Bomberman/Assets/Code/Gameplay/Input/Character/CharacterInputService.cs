@@ -42,8 +42,6 @@ namespace Gameplay.Input.Character
 			_controls.Character.PutBigBomb.performed += OnPutBigBombPerformed;
 			_controls.Character.PutUsualBomb.performed += OnPutUsualBombPerformed;
 			_controls.Character.PutHunterBomb.performed += OnPutHunterBombPerformed;
-			_controls.Character.PutTimeDelayBomb.performed +=
-				OnPutTimeDelayBombPerformed;
 			_controls.Character.PutRemoteDetonationBomb.performed +=
 				OnPutRemoteDetonationBombPerformed;
 		}
@@ -53,8 +51,6 @@ namespace Gameplay.Input.Character
 			_controls.Character.PutBigBomb.performed -= OnPutBigBombPerformed;
 			_controls.Character.PutUsualBomb.performed -= OnPutUsualBombPerformed;
 			_controls.Character.PutHunterBomb.performed -= OnPutHunterBombPerformed;
-			_controls.Character.PutTimeDelayBomb.performed -=
-				OnPutTimeDelayBombPerformed;
 			_controls.Character.PutRemoteDetonationBomb.performed -=
 				OnPutRemoteDetonationBombPerformed;
 		}
@@ -71,9 +67,6 @@ namespace Gameplay.Input.Character
 
 		void OnPutBigBombPerformed(InputAction.CallbackContext context) =>
 			CallPutBombEvent(BombType.Big);
-
-		void OnPutTimeDelayBombPerformed(InputAction.CallbackContext context) =>
-			CallPutBombEvent(BombType.TimeDelay);
 
 		void ICharacterInputActionProvider.CallPutBomb(BombType bombType) =>
 			CallPutBombEvent(bombType);

@@ -60,15 +60,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "PutTimeDelayBomb",
-                    "type": "Button",
-                    "id": "660c5076-62fe-41cf-9f6a-5194d4b9e2ec",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "PutRemoteDetonationBomb",
                     "type": "Button",
                     "id": "cefe6177-7c45-4e57-92c8-f450ed679d48",
@@ -274,17 +265,6 @@
                     "processors": "",
                     "groups": ";PC",
                     "action": "PutHunterBomb",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ba4ef746-0f1f-4c61-8d0a-1a9a231da104",
-                    "path": "<Keyboard>/c",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";PC",
-                    "action": "PutTimeDelayBomb",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

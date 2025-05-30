@@ -84,15 +84,6 @@ namespace Gameplay.Input
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""PutTimeDelayBomb"",
-                    ""type"": ""Button"",
-                    ""id"": ""660c5076-62fe-41cf-9f6a-5194d4b9e2ec"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""PutRemoteDetonationBomb"",
                     ""type"": ""Button"",
                     ""id"": ""cefe6177-7c45-4e57-92c8-f450ed679d48"",
@@ -303,17 +294,6 @@ namespace Gameplay.Input
                 },
                 {
                     ""name"": """",
-                    ""id"": ""ba4ef746-0f1f-4c61-8d0a-1a9a231da104"",
-                    ""path"": ""<Keyboard>/c"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";PC"",
-                    ""action"": ""PutTimeDelayBomb"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""c72e4f2f-9e04-4ee3-b0e8-b5961d5d4b57"",
                     ""path"": ""<Keyboard>/v"",
                     ""interactions"": """",
@@ -369,7 +349,6 @@ namespace Gameplay.Input
             m_Character_PutUsualBomb = m_Character.FindAction("PutUsualBomb", throwIfNotFound: true);
             m_Character_PutBigBomb = m_Character.FindAction("PutBigBomb", throwIfNotFound: true);
             m_Character_PutHunterBomb = m_Character.FindAction("PutHunterBomb", throwIfNotFound: true);
-            m_Character_PutTimeDelayBomb = m_Character.FindAction("PutTimeDelayBomb", throwIfNotFound: true);
             m_Character_PutRemoteDetonationBomb = m_Character.FindAction("PutRemoteDetonationBomb", throwIfNotFound: true);
         }
 
@@ -443,7 +422,6 @@ namespace Gameplay.Input
         private readonly InputAction m_Character_PutUsualBomb;
         private readonly InputAction m_Character_PutBigBomb;
         private readonly InputAction m_Character_PutHunterBomb;
-        private readonly InputAction m_Character_PutTimeDelayBomb;
         private readonly InputAction m_Character_PutRemoteDetonationBomb;
         public struct CharacterActions
         {
@@ -455,7 +433,6 @@ namespace Gameplay.Input
             public InputAction @PutUsualBomb => m_Wrapper.m_Character_PutUsualBomb;
             public InputAction @PutBigBomb => m_Wrapper.m_Character_PutBigBomb;
             public InputAction @PutHunterBomb => m_Wrapper.m_Character_PutHunterBomb;
-            public InputAction @PutTimeDelayBomb => m_Wrapper.m_Character_PutTimeDelayBomb;
             public InputAction @PutRemoteDetonationBomb => m_Wrapper.m_Character_PutRemoteDetonationBomb;
             public InputActionMap Get() { return m_Wrapper.m_Character; }
             public void Enable() { Get().Enable(); }
@@ -484,9 +461,6 @@ namespace Gameplay.Input
                 @PutHunterBomb.started += instance.OnPutHunterBomb;
                 @PutHunterBomb.performed += instance.OnPutHunterBomb;
                 @PutHunterBomb.canceled += instance.OnPutHunterBomb;
-                @PutTimeDelayBomb.started += instance.OnPutTimeDelayBomb;
-                @PutTimeDelayBomb.performed += instance.OnPutTimeDelayBomb;
-                @PutTimeDelayBomb.canceled += instance.OnPutTimeDelayBomb;
                 @PutRemoteDetonationBomb.started += instance.OnPutRemoteDetonationBomb;
                 @PutRemoteDetonationBomb.performed += instance.OnPutRemoteDetonationBomb;
                 @PutRemoteDetonationBomb.canceled += instance.OnPutRemoteDetonationBomb;
@@ -512,9 +486,6 @@ namespace Gameplay.Input
                 @PutHunterBomb.started -= instance.OnPutHunterBomb;
                 @PutHunterBomb.performed -= instance.OnPutHunterBomb;
                 @PutHunterBomb.canceled -= instance.OnPutHunterBomb;
-                @PutTimeDelayBomb.started -= instance.OnPutTimeDelayBomb;
-                @PutTimeDelayBomb.performed -= instance.OnPutTimeDelayBomb;
-                @PutTimeDelayBomb.canceled -= instance.OnPutTimeDelayBomb;
                 @PutRemoteDetonationBomb.started -= instance.OnPutRemoteDetonationBomb;
                 @PutRemoteDetonationBomb.performed -= instance.OnPutRemoteDetonationBomb;
                 @PutRemoteDetonationBomb.canceled -= instance.OnPutRemoteDetonationBomb;
@@ -561,7 +532,6 @@ namespace Gameplay.Input
             void OnPutUsualBomb(InputAction.CallbackContext context);
             void OnPutBigBomb(InputAction.CallbackContext context);
             void OnPutHunterBomb(InputAction.CallbackContext context);
-            void OnPutTimeDelayBomb(InputAction.CallbackContext context);
             void OnPutRemoteDetonationBomb(InputAction.CallbackContext context);
         }
     }

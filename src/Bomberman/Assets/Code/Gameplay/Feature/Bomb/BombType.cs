@@ -5,7 +5,6 @@
 		Big,
 		Usual,
 		Hunter,
-		TimeDelay,
 		RemoteDetonation,
 	}
 }
