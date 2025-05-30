@@ -1,4 +1,5 @@
-﻿using Gameplay.FinishLevel;
+﻿using Common.Logger;
+using Gameplay.FinishLevel;
 using Gameplay.Windows;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,17 +19,12 @@ namespace Gameplay.Feature.GameUI.Window
 
 		protected override void Initialize()
 		{
-			_goToMainMenuButton.onClick.AddListener(OnGoToMainMenuButtonClick);
+			Error.NoImplementation();
 		}
 
 		protected override void OnCleanup()
 		{
-			_goToMainMenuButton.onClick.RemoveListener(OnGoToMainMenuButtonClick);
-		}
-
-		void OnGoToMainMenuButtonClick()
-		{
-			_finishLevelService.SwitchGameToMainMenu();
+			Error.NoImplementation();
 		}
 	}
 }

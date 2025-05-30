@@ -8,7 +8,6 @@ namespace Gameplay.StaticData.SceneNames
 	public sealed class SceneNamesData : ScriptableObject, ISceneNameData
 	{
 		[field: SerializeField] public string Boot { get; private set; }
-		[field: SerializeField] public string MainMenu { get; private set; }
 		[field: SerializeField] public string Game { get; private set; }
 	}
 }

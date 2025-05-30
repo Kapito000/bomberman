@@ -26,11 +26,6 @@ namespace Gameplay.FinishLevel
 			_gameStateMachine.Enter<GamePause>();
 		}
 
-		public void SwitchGameToMainMenu()
-		{
-			_gameStateMachine.EnterToLoadScene(_sceneNameData.MainMenu);
-		}
-
 		public void LaunchNextLevel()
 		{
 			var gameSceneName = _sceneNameData.Game;
