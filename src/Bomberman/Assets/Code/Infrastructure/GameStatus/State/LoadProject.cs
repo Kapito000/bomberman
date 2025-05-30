@@ -12,7 +12,6 @@ namespace Infrastructure.GameStatus.State
 		[Inject] IBombDataService _bombData;
 		[Inject] ISaveLoadService _saveLoadService;
 
-		[Inject] IBonusesForLevel _bonusesForLevel;
 		[Inject] IEnemiesAtLevelsData _enemiesAtLevelsData;
 		[Inject] IAdditionalBombBonuses _additionalBombBonuses;
 		[Inject] IBombPocketBonusForLevels _bombPocketBonusForLevels;
@@ -48,7 +47,6 @@ namespace Infrastructure.GameStatus.State
 
 		void InitBonusesStaticData()
 		{
-			_bonusesForLevel.Init();
 			_additionalBombBonuses.Init();
 			_bombPocketBonusForLevels.Init();
 		}

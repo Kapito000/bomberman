@@ -33,7 +33,6 @@ namespace Infrastructure.Installer
 
 		void BindBonuses()
 		{
-			Bind(Constant.TsvDataId.c_Bonuses, _bonusesTable);
 			Bind(Constant.TsvDataId.c_BombPocketSizeBonus, _bombPocketSizeBonus);
 			Bind(Constant.TsvDataId.c_AdditionalBombBonuses, _additionalBombsBonuses);
 		}

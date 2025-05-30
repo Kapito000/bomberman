@@ -1,6 +1,5 @@
 ﻿using Gameplay.Feature.Bonus.Component;
 using Gameplay.Feature.MapGenerator.Services;
-using Infrastructure.ECS;
 using Infrastructure.ECS.Wrapper;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
