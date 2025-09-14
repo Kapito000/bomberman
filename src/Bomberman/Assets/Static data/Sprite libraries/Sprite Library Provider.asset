@@ -14,14 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <BombSkins>k__BackingField:
     _keyData:
-    - Big
     - Usual
-    - Hunter
-    - TimeDelay
-    - RemoteDetonation
     _valueData:
-    - {fileID: 7108339969198208228, guid: ffaf62139d23207459130bcc91e5edd0, type: 3}
     - {fileID: 7108339969198208228, guid: 3708eb69c37b88a43addb14fdfe984e0, type: 3}
-    - {fileID: 7108339969198208228, guid: 3bee3e3fe25abb6449e0d6f3765f76f2, type: 3}
-    - {fileID: 7108339969198208228, guid: 7a9daa4d9646e1d4a9a3c022a6a034c3, type: 3}
-    - {fileID: 7108339969198208228, guid: 3b6128fa730d55849b825608026bb28c, type: 3}
