@@ -6,11 +6,9 @@ using Gameplay.Feature.Bomb;
 using Gameplay.Feature.Bonus.Component;
 using Gameplay.Feature.Bonus.StaticData;
 using Gameplay.Progress;
-using Infrastructure.ECS;
 using Infrastructure.ECS.Wrapper;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
-using UnityEngine;
 using Zenject;
 
 namespace Gameplay.Feature.MapGenerator.System
@@ -26,22 +24,15 @@ namespace Gameplay.Feature.MapGenerator.System
 
 		public void Run(IEcsSystems systems)
 		{
-			if (TryGetBombDataList(out var bombBonusesDataList) == false)
+			if (TryGetBombDataList(out var bombBonusesDataList) == false ||
+			    bombBonusesDataList.Count == 0)
 				return;
 
 			foreach (var bonusEntity in _bonusFilterInject.Value)
 			{
 				_bonus.SetEntity(bonusEntity);
 				var bonusType = _bonus.BonusType();
-				if (bonusType != _bonusNames.Bomb)
-					continue;
 
-				if (bombBonusesDataList.Count == 0)
-				{
-					Debug.LogError(LogMessage.c_HasNoDataToCreateBombBonus);
-					return;
-				}
-				
 				var bombType = bombBonusesDataList[0];
 				bombBonusesDataList.RemoveAt(0);
 				_bonus.AddBombBonusType(bombType);
@@ -50,6 +41,7 @@ namespace Gameplay.Feature.MapGenerator.System
 
 		bool TryGetBombDataList(out List<BombType> list)
 		{
+			
 			list = Enum.GetValues(typeof(BombType)).Cast<BombType>().ToList();
 			return true;
 		}

@@ -5,7 +5,7 @@ namespace Gameplay.Feature.Bonus.StaticData
 {
 	public sealed class BonusesForLevel : IBonusesForLevel
 	{
-		const int _bounsCoutForLevel = 2;
+		const int _bounsCoutForLevel = 10;
 
 		[Inject] IBonusNames _bonusNames;
 

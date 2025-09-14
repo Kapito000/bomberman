@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15eef5c94ee84b7f80d838f3478d77ec, type: 3}
   m_Name: Bonus Names
   m_EditorClassIdentifier: 
-  <Bomb>k__BackingField: bomb
+  <Bomb>k__BackingField: additionalBomb
   <AddLifePoint>k__BackingField: additionalLifePoint
   <IncreaseSpeed>k__BackingField: IncreaseSpeed
-  <ExtendBombPocket>k__BackingField: additionalBomb

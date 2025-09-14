@@ -17,7 +17,6 @@ namespace Gameplay.Feature.MapGenerator
 			AddInit<CreateDestructibleTilesSystem>();
 			
 			AddInit<CreateBonusesSystem>();
-			AddInit<AdjustBombBonusesSystem>();
 			
 			AddInit<CreateFinishLevelDoorSystem>();
 			

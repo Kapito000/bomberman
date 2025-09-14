@@ -59,11 +59,11 @@ namespace Gameplay.Feature.BonusApplication.System
 		bool CanApplyBonus(EntityWrapper bonus, out EntityWrapper target)
 		{
 			var bonusType = bonus.BonusType();
-			if (bonusType != _bonusNames.ExtendBombPocket)
-			{
-				target = default;
-				return false;
-			}
+			// if (bonusType != _bonusNames.ExtendBombPocket)
+			// {
+				// target = default;
+				// return false;
+			// }
 
 			if (false == TryGetTargetEntity(_bonus, out target)
 			    || false == target.Has<BombStackSize, BombCollectionComponent>())

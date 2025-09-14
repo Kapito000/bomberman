@@ -44,11 +44,6 @@ namespace Gameplay.Feature.BonusApplication.System
 		bool CanApplyBonus(EntityWrapper bonus, out EntityWrapper target)
 		{
 			var bonusType = bonus.BonusType();
-			if (bonusType != _bonusNames.Bomb)
-			{
-				target = default;
-				return false;
-			}
 
 			if (false == TryGetTargetEntity(_bonus, out target)
 			    || false == target.Has<BombCollectionComponent>())
