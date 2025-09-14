@@ -114,11 +114,11 @@ namespace Gameplay.Feature.Enemy.Base.Factory
 
 		void SetMovementMode(string enemyId, EntityWrapper wrapper)
 		{
-			if (enemyId == Constant.EnemyId.c_Hologram)
-			{
-				wrapper.Add<Volatile>();
-				return;
-			}
+			// if (enemyId == Constant.EnemyId.c_Hologram)
+			// {
+				// wrapper.Add<Volatile>();
+				// return;
+			// }
 
 			wrapper.Add<Walking>();
 		}

@@ -16,7 +16,6 @@ namespace Gameplay.Feature.Enemy.Base.System
 	{
 		[Inject] IAIData _aiData;
 		[Inject] EcsWorld _world;
-		[Inject] IEnemyList _enemyList;
 		[Inject] EntityWrapper _enemy;
 		[Inject] EntityWrapper _parent;
 		[Inject] EntityWrapper _spawnRequest;

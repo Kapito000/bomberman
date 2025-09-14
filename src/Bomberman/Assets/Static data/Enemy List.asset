@@ -14,14 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dictionary:
     _keyData:
-    - Assassin
-    - Cyborg
-    - Flash
-    - Hologram
     - Scammer
     _valueData:
-    - {fileID: 11400000, guid: 152bb2d8ced3a0741b4d0bad4eacd005, type: 2}
-    - {fileID: 11400000, guid: e0896e151a7ddb64db0c25a2cdd603b3, type: 2}
-    - {fileID: 11400000, guid: 7f413120805cc754cb7d6040e3b2b220, type: 2}
-    - {fileID: 11400000, guid: a30ccf8872759624c95052775cce797b, type: 2}
     - {fileID: 11400000, guid: c853eaa7c2b47e248ad96c4a48057857, type: 2}
