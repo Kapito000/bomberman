@@ -14,9 +14,6 @@ namespace Gameplay.Feature.BonusApplication
 			
 			AddUpdate<AddBonusBombSystem>();
 			
-			AddUpdate<AddExtendBombPocketBonusSystem>();
-			AddUpdate<BombPocketSizeBonusTimerSystem>();
-			
 			AddUpdate<AddIncreaseMovementSpeedBonusSystem>();
 			AddUpdate<IncreaseMovementSpeedBonusTimerSystem>();
 		}
