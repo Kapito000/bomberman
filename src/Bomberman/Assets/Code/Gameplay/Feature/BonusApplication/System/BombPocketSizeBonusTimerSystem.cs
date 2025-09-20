@@ -1,5 +1,6 @@
 ﻿using Gameplay.Feature.Bomb.Component;
 using Gameplay.Feature.BonusApplication.Component;
+using Gameplay.Feature.Hero.Factory;
 using Infrastructure.ECS.Wrapper;
 using Infrastructure.TimeService;
 using Leopotam.EcsLite;
@@ -27,7 +28,7 @@ namespace Gameplay.Feature.BonusApplication.System
 				if (_timeService.GameTime() < timerEndMoment)
 					continue;
 
-				var size = 1;
+				var size = HeroFactory.BombStackSizeAtStart;
 				_bonusCarrier.SetBombStackSize(size);
 
 				_bonusCarrier.Remove<BombPocketSizeBonusTimer>();

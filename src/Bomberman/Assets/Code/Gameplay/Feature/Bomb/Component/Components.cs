@@ -1,8 +1,5 @@
 ﻿using System;
-using Common.Collections;
-using Common.Dictionary;
 using Gameplay.Feature.Bomb.Behaviour;
-using Infrastructure.ECS.Wrapper;
 using UnityEngine;
 
 namespace Gameplay.Feature.Bomb.Component

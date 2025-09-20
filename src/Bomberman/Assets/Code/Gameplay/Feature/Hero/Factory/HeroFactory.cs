@@ -17,7 +17,7 @@ namespace Gameplay.Feature.Hero.Factory
 {
 	public sealed class HeroFactory : IHeroFactory
 	{
-		const int c_bombStackSizeAtStart = 1;
+		public const int BombStackSizeAtStart = 10;
 
 		[Inject] IHeroData _heroData;
 		[Inject] IFactoryKit _kit;
@@ -43,7 +43,7 @@ namespace Gameplay.Feature.Hero.Factory
 				.Add<BombCarrier>()
 				.AddMoveSpeed(_heroData.MovementSpeed)
 				.AddLifePoints(_heroData.LifePointsOnStart)
-				.AddBombStackSize(c_bombStackSizeAtStart)
+				.AddBombStackSize(BombStackSizeAtStart)
 				;
 
 			AddTakenDamageEffectComponents(hero);
@@ -69,7 +69,8 @@ namespace Gameplay.Feature.Hero.Factory
 
 			hero.AddBombCollectionComponent(bombCollection);
 
-			bombCollection.AddBomb(BombType.Usual);
+			for (var i = 0; i < BombStackSizeAtStart; i++)
+				bombCollection.AddBomb(BombType.Usual);
 		}
 
 		void AddTakenDamageEffectComponents(EntityWrapper heroEntity)
