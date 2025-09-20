@@ -4,10 +4,10 @@ using Gameplay.UI.Component;
 using Gameplay.UI.StaticData;
 using Gameplay.Windows;
 using Infrastructure.AssetProvider;
-using Infrastructure.ECS;
 using Infrastructure.ECS.Wrapper;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
+using Sirenix.Utilities;
 using UnityEngine;
 using Zenject;
 
@@ -37,6 +37,8 @@ namespace Gameplay.UI.System
 				}
 				_windowService.Create(parent, windowsIds);
 			}
+
+			_windowService.Pool.ForEach(w => w.Init());
 		}
 
 		bool TryGetWindowsIdsList(out IReadOnlyList<WindowId> list) =>

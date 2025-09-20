@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Gameplay.Windows.Factory;
 using UnityEngine;
 using Zenject;
@@ -13,6 +14,8 @@ namespace Gameplay.Windows
 		readonly List<WindowId> _openedWindows = new();
 		readonly Dictionary<WindowId, BaseWindow> _poolWindows = new();
 
+		public BaseWindow[] Pool => _poolWindows.Values.ToArray();
+		
 		public void Create(Transform parent, params WindowId[] ids) =>
 			Create(parent, (IEnumerable<WindowId>)ids);
 
@@ -30,7 +33,7 @@ namespace Gameplay.Windows
 			Debug.LogError($"The window \"{window.Id}\" already registered.");
 			return false;
 		}
-
+		
 		public bool Opened(WindowId windowId) =>
 			_openedWindows.Contains(windowId);
 

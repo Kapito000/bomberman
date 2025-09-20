@@ -13,5 +13,6 @@ namespace Gameplay.Windows
 		void Create(Transform parent, IEnumerable<WindowId> ids);
 		bool TryRegistry(BaseWindow window);
 		bool Opened(WindowId windowId);
+		BaseWindow[] Pool { get; }
 	}
 }

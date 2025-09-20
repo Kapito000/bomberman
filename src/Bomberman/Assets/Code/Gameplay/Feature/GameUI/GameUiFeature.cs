@@ -1,4 +1,5 @@
-﻿using Gameplay.UI.System;
+﻿using Gameplay.Feature.MainMenu.System;
+using Gameplay.UI.System;
 using Infrastructure.Factory.SystemFactory;
 
 namespace Gameplay.Feature.GameUI
@@ -10,6 +11,7 @@ namespace Gameplay.Feature.GameUI
 			AddInit<CreateRootCanvasSystem>();
 			AddInit<CreateWindowsRootSystem>();
 			AddInit<CreateWindowsSystem>();
+			AddInit<IntiWindowsSystem>();
 		}
 	}
 }
